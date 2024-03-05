@@ -1,0 +1,15 @@
+<div class="main">
+  <h1>Employees</h1>
+  
+  <div class="search">
+    <input (input)="onSearch($event)" placeholder="search" />
+    <button (click)="onReset()">Reset</button>
+  </div>
+
+  <cora-table [users]="filteredUsers()" (onActionsTable)="onActionsTable($event)" />
+  
+  <p *ngIf="selectedUser">
+    {{selectedUser.name}}
+    {{selectedUser.id}}
+  </p>
+</div>

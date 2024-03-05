@@ -1,0 +1,21 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th *ngFor="let h of headers">{{ h }}</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.role }}</td>
+      <td>{{ user.age }}</td>
+      <td>
+        <button (click)="onActions(user, 'select')">Select</button>
+        <button (click)="onActions(user, 'duplicate')">Duplicate</button>
+        <button (click)="onActions(user, 'delete')">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
